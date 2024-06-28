@@ -21,6 +21,7 @@ import (
 
 var (
 	kubeconfig string
+	labels     string
 )
 
 func init() {
@@ -30,6 +31,12 @@ func init() {
 		"kubeconfig",
 		filepath.Join(homedir, ".kube", "config"),
 		"absolute path to the kubeconfig file",
+	)
+	pflag.StringVar(
+		&labels,
+		"labels",
+		"k8s-app=cilium",
+		"labels to filter the pods (alternative: `k8s-app=kube-proxy`)",
 	)
 }
 
@@ -47,7 +54,7 @@ func main() {
 	}
 
 	pods, err := clientset.CoreV1().Pods("kube-system").List(context.TODO(), metav1.ListOptions{
-		LabelSelector: "k8s-app=kube-proxy",
+		LabelSelector: labels,
 	})
 	if err != nil {
 		log.Fatal(err)
