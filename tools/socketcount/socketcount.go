@@ -55,6 +55,10 @@ func main() {
 
 	totalSockets := 0
 	for _, pod := range pods.Items {
+		logger := log.WithFields(log.Fields{
+			"node": pod.Spec.NodeName,
+		})
+
 		req := clientset.CoreV1().RESTClient().
 			Post().
 			Resource("pods").
@@ -71,7 +75,8 @@ func main() {
 
 		exec, err := remotecommand.NewSPDYExecutor(config, "POST", req.URL())
 		if err != nil {
-			log.Fatal(err)
+			logger.WithError(err).Warn("failed to create executor")
+			continue
 		}
 
 		var stdout, stderr bytes.Buffer
@@ -80,12 +85,14 @@ func main() {
 			Stderr: &stderr,
 		})
 		if err != nil {
-			log.Fatal(err)
+			logger.WithError(err).Warn("failed to stream")
+			continue
 		}
 
 		sockets, err := strconv.ParseInt(strings.Trim(stdout.String(), "\n"), 10, 64)
 		if err != nil {
-			log.Fatal(err)
+			logger.WithError(err).Warn("failed to parse sockets")
+			continue
 		}
 
 		totalSockets += int(sockets)
