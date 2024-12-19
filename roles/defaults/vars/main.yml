@@ -12,214 +12,214 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-atmosphere_release: "2024.1"
+atmosphere_release: '2024.1'
 
 _atmosphere_images:
-  alertmanager: quay.io/prometheus/alertmanager:v0.27.0
-  barbican_api: "registry.atmosphere.dev/library/barbican:{{ atmosphere_release }}"
-  barbican_db_sync: "registry.atmosphere.dev/library/barbican:{{ atmosphere_release }}"
-  bootstrap: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  ceph_config_helper: "registry.atmosphere.dev/library/libvirtd:{{ atmosphere_release }}"
-  ceph: quay.io/ceph/ceph:v18.2.2
-  cert_manager_cainjector: quay.io/jetstack/cert-manager-cainjector:v1.12.10
-  cert_manager_cli: quay.io/jetstack/cert-manager-ctl:v1.12.10
-  cert_manager_controller: quay.io/jetstack/cert-manager-controller:v1.12.10
-  cert_manager_webhook: quay.io/jetstack/cert-manager-webhook:v1.12.10
-  cert_manager_acmesolver: quay.io/jetstack/cert-manager-acmesolver:v1.12.10
-  cilium_node: quay.io/cilium/cilium:v1.14.8
-  cilium_operator: quay.io/cilium/operator-generic:v1.14.8
-  cinder_api: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_backup_storage_init: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_backup: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_db_sync: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_scheduler: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_storage_init: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_volume_usage_audit: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cinder_volume: "registry.atmosphere.dev/library/cinder:{{ atmosphere_release }}"
-  cluster_api_controller: registry.k8s.io/cluster-api/cluster-api-controller:v1.6.0
-  cluster_api_kubeadm_bootstrap_controller: registry.k8s.io/cluster-api/kubeadm-bootstrap-controller:v1.6.0
-  cluster_api_kubeadm_control_plane_controller: registry.k8s.io/cluster-api/kubeadm-control-plane-controller:v1.6.0
-  cluster_api_openstack_controller: registry.k8s.io/capi-openstack/capi-openstack-controller:v0.9.0
-  csi_node_driver_registrar: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.10.0
-  csi_rbd_attacher: registry.k8s.io/sig-storage/csi-attacher:v4.5.0
-  csi_rbd_plugin: quay.io/cephcsi/cephcsi:v3.11.0
-  csi_rbd_provisioner: registry.k8s.io/sig-storage/csi-provisioner:v4.0.0
-  csi_rbd_resizer: registry.k8s.io/sig-storage/csi-resizer:v1.10.0
-  csi_rbd_snapshotter: registry.k8s.io/sig-storage/csi-snapshotter:v7.0.0
-  db_drop: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  db_init: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  dep_check: "registry.atmosphere.dev/library/kubernetes-entrypoint:{{ atmosphere_release }}"
-  designate_api: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_central: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_db_sync: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_mdns: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_producer: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_sink: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  designate_worker: "registry.atmosphere.dev/library/designate:{{ atmosphere_release }}"
-  glance_api: "registry.atmosphere.dev/library/glance:{{ atmosphere_release }}"
-  glance_db_sync: "registry.atmosphere.dev/library/glance:{{ atmosphere_release }}"
-  glance_metadefs_load: "registry.atmosphere.dev/library/glance:{{ atmosphere_release }}"
-  glance_registry: "registry.atmosphere.dev/library/glance:{{ atmosphere_release }}"
-  glance_storage_init: "registry.atmosphere.dev/library/glance:{{ atmosphere_release }}"
-  grafana_sidecar: quay.io/kiwigrid/k8s-sidecar:1.26.1
-  grafana: docker.io/grafana/grafana:11.0.0
-  goldpinger: docker.io/bloomberg/goldpinger:3.10.1
-  haproxy: docker.io/library/haproxy:2.5
-  heat_api: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_cfn: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_cloudwatch: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_db_sync: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_engine_cleaner: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_engine: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  heat_purge_deleted: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  horizon_db_sync: "registry.atmosphere.dev/library/horizon:{{ atmosphere_release }}"
-  horizon: "registry.atmosphere.dev/library/horizon:{{ atmosphere_release }}"
-  ibm_block_csi_addons_replicator: quay.io/ibmcsiblock/csi-block-volumereplication-operator:v0.9.0
-  ibm_block_csi_attacher: registry.k8s.io/sig-storage/csi-attacher:v4.2.0
-  ibm_block_csi_driver_controller: quay.io/ibmcsiblock/ibm-block-csi-driver-controller:1.11.2
-  ibm_block_csi_driver_node: quay.io/ibmcsiblock/ibm-block-csi-driver-node:1.11.2
-  ibm_block_csi_node_driver_registrar: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.6.3
-  ibm_block_csi_livenessprobe: registry.k8s.io/sig-storage/livenessprobe:v2.9.0
-  ibm_block_csi_operator: quay.io/ibmcsiblock/ibm-block-csi-operator:1.11.2
-  ibm_block_csi_provisioner: registry.k8s.io/sig-storage/csi-provisioner:v3.4.0
-  ibm_block_csi_resizer: registry.k8s.io/sig-storage/csi-resizer:v1.7.0
-  ibm_block_csi_snapshotter: registry.k8s.io/sig-storage/csi-snapshotter:v6.2.1
-  ibm_block_csi_volume_group: quay.io/ibmcsiblock/csi-volume-group-operator:v0.9.1
-  ingress_nginx_controller: registry.k8s.io/ingress-nginx/controller:v1.10.1
-  ingress_nginx_default_backend: registry.k8s.io/defaultbackend-amd64:1.5
-  ingress_nginx_kube_webhook_certgen: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1
-  ironic_api: "registry.atmosphere.dev/library/ironic:{{ atmosphere_release }}"
-  ironic_conductor: "registry.atmosphere.dev/library/ironic:{{ atmosphere_release }}"
-  ironic_db_sync: "registry.atmosphere.dev/library/ironic:{{ atmosphere_release }}"
-  ironic_manage_cleaning_network: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  ironic_pxe_http: docker.io/library/nginx:1.25
-  ironic_pxe_init: "registry.atmosphere.dev/library/ironic:{{ atmosphere_release }}"
-  ironic_pxe: "registry.atmosphere.dev/library/ironic:{{ atmosphere_release }}"
-  ironic_retrive_cleaning_network: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  ironic_retrive_swift_config: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  keepalived: "registry.atmosphere.dev/library/keepalived:{{ atmosphere_release }}"
-  keycloak: quay.io/keycloak/keycloak:24.0.5-0
-  keystone_api: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  keystone_credential_cleanup: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  keystone_credential_rotate: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  keystone_credential_setup: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  keystone_db_sync: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  keystone_domain_manage: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  keystone_fernet_rotate: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  keystone_fernet_setup: "registry.atmosphere.dev/library/keystone:{{ atmosphere_release }}"
-  ks_endpoints: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  ks_service: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  ks_user: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  kube_apiserver: registry.k8s.io/kube-apiserver:v1.22.17
-  kube_controller_manager: registry.k8s.io/kube-controller-manager:v1.22.17
-  kube_coredns: registry.k8s.io/coredns/coredns:v1.8.4
-  kube_etcd: registry.k8s.io/etcd:3.5.6-0
-  kube_proxy: registry.k8s.io/kube-proxy:v1.22.17
-  kube_scheduler: registry.k8s.io/kube-scheduler:v1.22.17
-  kube_state_metrics: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.12.0
-  kube_vip: ghcr.io/kube-vip/kube-vip:v0.6.4
-  kubectl: docker.io/bitnami/kubectl:1.27.3
-  libvirt: "registry.atmosphere.dev/library/libvirtd:{{ atmosphere_release }}"
-  libvirt_tls_sidecar: "registry.atmosphere.dev/library/libvirt-tls-sidecar:{{ atmosphere_release }}"
-  libvirt_exporter: registry.atmosphere.dev/library/libvirtd-exporter:latest
-  local_path_provisioner_helper: docker.io/library/busybox:1.36.0
-  local_path_provisioner: docker.io/rancher/local-path-provisioner:v0.0.24
-  loki_gateway: docker.io/nginxinc/nginx-unprivileged:1.24-alpine
-  loki: docker.io/grafana/loki:3.0.0
-  magnum_api: "registry.atmosphere.dev/library/magnum:{{ atmosphere_release }}"
-  magnum_cluster_api_proxy: "registry.atmosphere.dev/library/magnum:{{ atmosphere_release }}"
-  magnum_conductor: "registry.atmosphere.dev/library/magnum:{{ atmosphere_release }}"
-  magnum_db_sync: "registry.atmosphere.dev/library/magnum:{{ atmosphere_release }}"
-  magnum_registry: quay.io/vexxhost/magnum-cluster-api-registry:latest
-  manila_api: "registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
-  manila_data: "registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
-  manila_db_sync: "registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
-  manila_scheduler: "registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
-  manila_share: "registry.atmosphere.dev/library/manila:{{ atmosphere_release }}"
-  memcached: docker.io/library/memcached:1.6.26
-  netoffload: "registry.atmosphere.dev/library/netoffload:{{ atmosphere_release }}"
-  neutron_bagpipe_bgp: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_bgp_dragent: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_coredns: docker.io/coredns/coredns:1.11.1
-  neutron_db_sync: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_dhcp: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_ironic_agent: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_l2gw: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_l3: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_linuxbridge_agent: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_metadata: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_netns_cleanup_cron: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_openvswitch_agent: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_ovn_metadata: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_server: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_rpc_server: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_sriov_agent_init: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_sriov_agent: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  neutron_policy_server: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  node_feature_discovery: registry.k8s.io/nfd/node-feature-discovery:v0.15.4
-  nova_api: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_archive_deleted_rows: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_cell_setup_init: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  nova_cell_setup: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_compute_ironic: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_compute_ssh: "registry.atmosphere.dev/library/nova-ssh:{{ atmosphere_release }}"
-  nova_compute: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_conductor: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_consoleauth: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_db_sync: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_novncproxy_assets: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_novncproxy: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_placement: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_scheduler: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_service_cleaner: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  nova_spiceproxy_assets: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  nova_spiceproxy: "registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
-  oauth2_proxy: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
-  octavia_api: "registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_db_sync: "registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_health_manager_init: "registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  octavia_health_manager: "registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_housekeeping: "registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_worker: "registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  openstack_cli: "registry.atmosphere.dev/library/python-openstackclient:{{ atmosphere_release }}"
-  openvswitch_db_server: "registry.atmosphere.dev/library/openvswitch:{{ atmosphere_release }}"
-  openvswitch_vswitchd: "registry.atmosphere.dev/library/openvswitch:{{ atmosphere_release }}"
-  ovn_controller: "registry.atmosphere.dev/library/ovn-host:{{ atmosphere_release }}"
-  ovn_logging_parser: "registry.atmosphere.dev/library/neutron:{{ atmosphere_release }}"
-  ovn_northd: "registry.atmosphere.dev/library/ovn-central:{{ atmosphere_release }}"
-  ovn_ovsdb_nb: "registry.atmosphere.dev/library/ovn-central:{{ atmosphere_release }}"
-  ovn_ovsdb_sb: "registry.atmosphere.dev/library/ovn-central:{{ atmosphere_release }}"
-  pause: registry.k8s.io/pause:3.9
-  percona_xtradb_cluster_haproxy: docker.io/percona/percona-xtradb-cluster-operator:1.14.0-haproxy
-  percona_xtradb_cluster_operator: docker.io/percona/percona-xtradb-cluster-operator:1.14.0
-  percona_xtradb_cluster: docker.io/percona/percona-xtradb-cluster:8.0.36-28.1
-  percona_version_service: docker.io/perconalab/version-service:production-2048c1f
-  placement_db_sync: "registry.atmosphere.dev/library/placement:{{ atmosphere_release }}"
-  placement: "registry.atmosphere.dev/library/placement:{{ atmosphere_release }}"
-  pod_tls_sidecar: registry.atmosphere.dev/library/pod-tls-sidecar:latest
-  prometheus_config_reloader: quay.io/prometheus-operator/prometheus-config-reloader:v0.73.0
-  prometheus_ipmi_exporter: us-docker.pkg.dev/vexxhost-infra/openstack/ipmi-exporter:1.4.0
-  prometheus_memcached_exporter: quay.io/prometheus/memcached-exporter:v0.14.3
-  prometheus_mysqld_exporter: quay.io/prometheus/mysqld-exporter:v0.15.1
-  prometheus_node_exporter: quay.io/prometheus/node-exporter:v1.8.1
-  prometheus_openstack_database_exporter: ghcr.io/vexxhost/openstack-database-exporter:v0.4.2
-  prometheus_openstack_exporter: ghcr.io/openstack-exporter/openstack-exporter:1.7.0
-  prometheus_operator_kube_webhook_certgen: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6
-  prometheus_operator: quay.io/prometheus-operator/prometheus-operator:v0.74.0
-  prometheus_pushgateway: docker.io/prom/pushgateway:v1.8.0
-  prometheus: quay.io/prometheus/prometheus:v2.51.2
-  rabbit_init: docker.io/library/rabbitmq:3.13.3-management
-  rabbitmq_cluster_operator: docker.io/rabbitmqoperator/cluster-operator:2.9.0
-  rabbitmq_credential_updater: docker.io/rabbitmqoperator/default-user-credential-updater:1.0.4
-  rabbitmq_server: docker.io/library/rabbitmq:3.13.3-management
-  rabbitmq_topology_operator: docker.io/rabbitmqoperator/messaging-topology-operator:1.14.1
-  rook_ceph: docker.io/rook/ceph:v1.14.5
+  alertmanager: quay.io/prometheus/alertmanager:v0.27.0@sha256:e13b6ed5cb929eeaee733479dce55e10eb3bc2e9c4586c705a4e8da41e5eacf5
+  barbican_api: registry.atmosphere.dev/library/barbican:2024.1@sha256:b98891f50e7bd98da920e434980a020403af249546aaf148f5d1874f1f10c079
+  barbican_db_sync: registry.atmosphere.dev/library/barbican:2024.1@sha256:b98891f50e7bd98da920e434980a020403af249546aaf148f5d1874f1f10c079
+  bootstrap: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  ceph_config_helper: registry.atmosphere.dev/library/libvirtd:2024.1@sha256:bf5d95e6e84fe03e2f765d1b5922aa9b68faf42079a0049bcef82e3b687acb6c
+  ceph: quay.io/ceph/ceph:v18.2.2@sha256:f8d467dcf49d13b8ea42229d89be642581110175d8ce36e216aefc9b32b0854d
+  cert_manager_cainjector: quay.io/jetstack/cert-manager-cainjector:v1.12.10@sha256:efa6460b563dea6c4d805a275b6052499a9d1be79922df93fec61c5201f4875a
+  cert_manager_cli: quay.io/jetstack/cert-manager-ctl:v1.12.10@sha256:85f0d8c4ec805bae754cc651866bd2aef0804120894467fbe99b8fdf8b7e99fe
+  cert_manager_controller: quay.io/jetstack/cert-manager-controller:v1.12.10@sha256:ff0817580fa47fa99be05cb22417cbbfdb5424fabf7ccb7bd9b9db255b0f3c0f
+  cert_manager_webhook: quay.io/jetstack/cert-manager-webhook:v1.12.10@sha256:52a4d4b212ca270127d4167ea31348642ee564c244bb5b1f2b486eb28f3a8e1b
+  cert_manager_acmesolver: quay.io/jetstack/cert-manager-acmesolver:v1.12.10@sha256:c823e8a2d5136a395981c346d5595a84b4294b0b18f7fb9f9a779ebaceeb1342
+  cilium_node: quay.io/cilium/cilium:v1.14.8@sha256:7fca3ba4b04af066e8b086b5c1a52e30f52db01ffc642e7db0a439514aed3ada
+  cilium_operator: quay.io/cilium/operator-generic:v1.14.8@sha256:56d373c12483c09964a00a29246595917603a077a298aa90a98e4de32c86b7dc
+  cinder_api: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_backup_storage_init: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_backup: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_db_sync: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_scheduler: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_storage_init: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_volume_usage_audit: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cinder_volume: registry.atmosphere.dev/library/cinder:2024.1@sha256:bd0e95b528bf67f12d7eb3f4fa17e7df6baaccbe1e2b159f8cc56ad53c2205d3
+  cluster_api_controller: registry.k8s.io/cluster-api/cluster-api-controller:v1.6.0@sha256:ebeb2f119ae68fc20ead4cb01e17a643e2c51e22fee27b8927b2d9816a8d9ec8
+  cluster_api_kubeadm_bootstrap_controller: registry.k8s.io/cluster-api/kubeadm-bootstrap-controller:v1.6.0@sha256:c300ee2588d1efc0ed3f6fde488192805928073148f81b3d364eddecfa3abd36
+  cluster_api_kubeadm_control_plane_controller: registry.k8s.io/cluster-api/kubeadm-control-plane-controller:v1.6.0@sha256:e878c668ea534e805bf10a48203de205b4d89fcea6a9da03c7708c0e69330cc3
+  cluster_api_openstack_controller: registry.k8s.io/capi-openstack/capi-openstack-controller:v0.9.0@sha256:9bfabeece72192b972d6dbcf2e6dc555d527a0cd42e0c500fa708e9e20b2266d
+  csi_node_driver_registrar: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.10.0@sha256:bb5144434c868d65d8dd7c267daaab73fef5b43ec941fe5289f95e1f36398a20
+  csi_rbd_attacher: registry.k8s.io/sig-storage/csi-attacher:v4.5.0@sha256:0ed59e144f58f35638913db0751cdfe06439280197b20f6579679ada6acc0bb6
+  csi_rbd_plugin: quay.io/cephcsi/cephcsi:v3.11.0@sha256:a338c0dec57b8033e01f277dc342607d7610411422cc3ce47f176ab059aeaf21
+  csi_rbd_provisioner: registry.k8s.io/sig-storage/csi-provisioner:v4.0.0@sha256:918a622c8b57a0eca1190089d5c839bd85b0ce38f3314044fe2ddc52e03ea8f8
+  csi_rbd_resizer: registry.k8s.io/sig-storage/csi-resizer:v1.10.0@sha256:df476de34f9fefbb0e331dc2665a1eb5396403116930a76a25eac4cc46df8c01
+  csi_rbd_snapshotter: registry.k8s.io/sig-storage/csi-snapshotter:v7.0.0@sha256:1b9d1b5f08815c231156e31883bd2bae99a1cfb31ac87c5c2ab3a57b129ad947
+  db_drop: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  db_init: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  dep_check: registry.atmosphere.dev/library/kubernetes-entrypoint:2024.1@sha256:53bad214700f6b46116d7a1da5d3e1629b6f5ac7b0fd8fd7b55bdc08a2b32be4
+  designate_api: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_central: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_db_sync: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_mdns: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_producer: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_sink: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  designate_worker: registry.atmosphere.dev/library/designate:2024.1@sha256:a494f5c79d32531864372c15fd64a62640ca5a5bc58545875490d0659c2a79c7
+  glance_api: registry.atmosphere.dev/library/glance:2024.1@sha256:fc7efa817652882c0e65421376331677077e421ca653d914a8e8256bed535142
+  glance_db_sync: registry.atmosphere.dev/library/glance:2024.1@sha256:fc7efa817652882c0e65421376331677077e421ca653d914a8e8256bed535142
+  glance_metadefs_load: registry.atmosphere.dev/library/glance:2024.1@sha256:fc7efa817652882c0e65421376331677077e421ca653d914a8e8256bed535142
+  glance_registry: registry.atmosphere.dev/library/glance:2024.1@sha256:fc7efa817652882c0e65421376331677077e421ca653d914a8e8256bed535142
+  glance_storage_init: registry.atmosphere.dev/library/glance:2024.1@sha256:fc7efa817652882c0e65421376331677077e421ca653d914a8e8256bed535142
+  grafana_sidecar: quay.io/kiwigrid/k8s-sidecar:1.26.1@sha256:b8d5067137fec093cf48670dc3a1dbb38f9e734f3a6683015c2e89a45db5fd16
+  grafana: registry.atmosphere.dev/docker.io/grafana/grafana:11.0.0@sha256:a80bc3848cf5d4b2958ea25dbeb36fa9442ef4be8c73fe4bff11340307c32919
+  goldpinger: registry.atmosphere.dev/docker.io/bloomberg/goldpinger:3.10.1@sha256:70416f19f1cbeedd344d37b08e64114779976b99905e0d018e71c437cde750dc
+  haproxy: registry.atmosphere.dev/docker.io/library/haproxy:2.5@sha256:489dcc4385fd45813f3e9252b2f1f440db5749e4845d560250ce5083cc45eeb0
+  heat_api: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_cfn: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_cloudwatch: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_db_sync: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_engine_cleaner: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_engine: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  heat_purge_deleted: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  horizon_db_sync: registry.atmosphere.dev/library/horizon:2024.1@sha256:08b9af846fe62116dace0fa1137443e5390293e918d903553538bb8349a3485f
+  horizon: registry.atmosphere.dev/library/horizon:2024.1@sha256:08b9af846fe62116dace0fa1137443e5390293e918d903553538bb8349a3485f
+  ibm_block_csi_addons_replicator: quay.io/ibmcsiblock/csi-block-volumereplication-operator:v0.9.0@sha256:df6b5fb320bbd7fea1134fd28e24d3f09b40ca831ddc79436d6ccf63109bb5d9
+  ibm_block_csi_attacher: registry.k8s.io/sig-storage/csi-attacher:v4.2.0@sha256:1ec3649e8bd7f968dcca6f3578896a4481962af2fe8e16d1aadf555288fdae36
+  ibm_block_csi_driver_controller: quay.io/ibmcsiblock/ibm-block-csi-driver-controller:1.11.2@sha256:0d3f07215a3d766ca21f516b1f0c2ed6d3578f2fbafebb93918accc9b7ffd532
+  ibm_block_csi_driver_node: quay.io/ibmcsiblock/ibm-block-csi-driver-node:1.11.2@sha256:1c8a37c78055ca7d4b56e5a9067950315a37e6460cd6109c0fea9088a5ba2f20
+  ibm_block_csi_node_driver_registrar: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.6.3@sha256:2fd61050bdde74072b42076982de3c4de1920e47bce3756b6e1f8c384846d354
+  ibm_block_csi_livenessprobe: registry.k8s.io/sig-storage/livenessprobe:v2.9.0@sha256:9aeda2bc549a8842c47ef0123376255ac7c2a828acbe191317e94a282a2c9b04
+  ibm_block_csi_operator: quay.io/ibmcsiblock/ibm-block-csi-operator:1.11.2@sha256:67cc5dd767047313460240359dd913ac1b5dcc898260baf2bcad11a63bd0ca6b
+  ibm_block_csi_provisioner: registry.k8s.io/sig-storage/csi-provisioner:v3.4.0@sha256:7f0d080e35ac455c52956e451b8d230c1eca1a8e0d943fdb657df4e093d03d0f
+  ibm_block_csi_resizer: registry.k8s.io/sig-storage/csi-resizer:v1.7.0@sha256:b00685aa6512da6488e824a11fbb40e1689cf0803dde02e7b5eaad1d95597d90
+  ibm_block_csi_snapshotter: registry.k8s.io/sig-storage/csi-snapshotter:v6.2.1@sha256:2f4a5f6628f7359873bdbe99a26b33e4311e140c3e359306319e33f0cb3cde38
+  ibm_block_csi_volume_group: quay.io/ibmcsiblock/csi-volume-group-operator:v0.9.1@sha256:0b13b895cff8fb92ec7016c95667810f3bdc2f753a3196c72baae24cbee03478
+  ingress_nginx_controller: registry.k8s.io/ingress-nginx/controller:v1.10.1@sha256:959e313aceec9f38e18a329ca3756402959e84e63ae8ba7ac1ee48aec28d51b9
+  ingress_nginx_default_backend: registry.k8s.io/defaultbackend-amd64:1.5@sha256:4dc5e07c8ca4e23bddb3153737d7b8c556e5fb2f29c4558b7cd6e6df99c512c7
+  ingress_nginx_kube_webhook_certgen: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.1@sha256:35379defc3e7025b1c00d37092f560ce87d06ea5ab35d04ff8a0cf22d316bcf2
+  ironic_api: registry.atmosphere.dev/library/ironic:2024.1@sha256:7d16be192aefc340f6ba1ed92e6ed40957924cd9673ea988e05b0dac961b9b43
+  ironic_conductor: registry.atmosphere.dev/library/ironic:2024.1@sha256:7d16be192aefc340f6ba1ed92e6ed40957924cd9673ea988e05b0dac961b9b43
+  ironic_db_sync: registry.atmosphere.dev/library/ironic:2024.1@sha256:7d16be192aefc340f6ba1ed92e6ed40957924cd9673ea988e05b0dac961b9b43
+  ironic_manage_cleaning_network: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  ironic_pxe_http: registry.atmosphere.dev/docker.io/library/nginx:1.25@sha256:a484819eb60211f5299034ac80f6a681b06f89e65866ce91f356ed7c72af059c
+  ironic_pxe_init: registry.atmosphere.dev/library/ironic:2024.1@sha256:7d16be192aefc340f6ba1ed92e6ed40957924cd9673ea988e05b0dac961b9b43
+  ironic_pxe: registry.atmosphere.dev/library/ironic:2024.1@sha256:7d16be192aefc340f6ba1ed92e6ed40957924cd9673ea988e05b0dac961b9b43
+  ironic_retrive_cleaning_network: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  ironic_retrive_swift_config: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  keepalived: registry.atmosphere.dev/library/keepalived:2024.1@sha256:7a2b690a76b9e5ca39f9f2d9c19f66e8b5259ef43a9e7607e04fb0e31eb29232
+  keycloak: quay.io/keycloak/keycloak:24.0.5-0@sha256:c916c668a5cd589948c3310ab31ffcfc5da55f0e546028f2f606419ce17c6ad8
+  keystone_api: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  keystone_credential_cleanup: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  keystone_credential_rotate: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  keystone_credential_setup: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  keystone_db_sync: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  keystone_domain_manage: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  keystone_fernet_rotate: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  keystone_fernet_setup: registry.atmosphere.dev/library/keystone:2024.1@sha256:b7cbdfe9551f1f3e2ff1f9dcb71486b35b29b0d5aa52f7ee80f4710249c7646f
+  ks_endpoints: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  ks_service: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  ks_user: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  kube_apiserver: registry.k8s.io/kube-apiserver:v1.22.17@sha256:d88d1c8f972e10ff4b4176f3185434e2832d3805c457fa9e8816f1da2fdf3b93
+  kube_controller_manager: registry.k8s.io/kube-controller-manager:v1.22.17@sha256:c3e041c8c8c9ffd33d421c8c1de1f42da52b616bfcf61880498e9efc9ec88005
+  kube_coredns: registry.k8s.io/coredns/coredns:v1.8.4@sha256:10683d82b024a58cc248c468c2632f9d1b260500f7cd9bb8e73f751048d7d6d4
+  kube_etcd: registry.k8s.io/etcd:3.5.6-0@sha256:b0fdb657c0bd10d8c96ed2ce762842384709a9fc54d532220d5252f1f99b4d1d
+  kube_proxy: registry.k8s.io/kube-proxy:v1.22.17@sha256:614ec43f14e16e077173afa61ee355f8a5d1cc5b1c5e8030766781dc5ccde171
+  kube_scheduler: registry.k8s.io/kube-scheduler:v1.22.17@sha256:f85dda445b7c8da197b8e39b0ca2b125b1e97a4a365d45c04d2759aefe935974
+  kube_state_metrics: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.12.0@sha256:af36e32f56c6f2e1f861525e8c438d6913ea236b5480aafe4bc6ab5d4b9d40f1
+  kube_vip: ghcr.io/kube-vip/kube-vip:v0.6.4@sha256:aa09234646e542dc2629c3dbd5698a77123aecb88d3b01a1d3ba5a78648c45b8
+  kubectl: registry.atmosphere.dev/docker.io/bitnami/kubectl:1.27.3@sha256:876cebc2d9272d9eb42c2128c9a08c7e7715dbfe4f2eb2f0b3612df977fdd6b7
+  libvirt: registry.atmosphere.dev/library/libvirtd:2024.1@sha256:bf5d95e6e84fe03e2f765d1b5922aa9b68faf42079a0049bcef82e3b687acb6c
+  libvirt_tls_sidecar: registry.atmosphere.dev/library/libvirt-tls-sidecar:2024.1@sha256:faa4f942da6c95ca1a2867cec9853ae32e1b42d902f6039d03703460626ec457
+  libvirt_exporter: registry.atmosphere.dev/library/libvirtd-exporter:latest@sha256:db27df3396cf93310bd1f5d3111cc7ddd3b6d871dae19d2a518d655e7ca2e5ee
+  local_path_provisioner_helper: registry.atmosphere.dev/docker.io/library/busybox:1.36.0@sha256:086417a48026173aaadca4ce43a1e4b385e8e62cc738ba79fc6637049674cac0
+  local_path_provisioner: registry.atmosphere.dev/docker.io/rancher/local-path-provisioner:v0.0.24@sha256:b7dea5221f06f6feed7788db0ad6b024a433c8f55533bd6cc792dc2079ff9ad2
+  loki_gateway: registry.atmosphere.dev/docker.io/nginxinc/nginx-unprivileged:1.24-alpine@sha256:be76a26e238d9242d1778d39fd0c5a0e4676408870ed56063d4062ba654b1e4e
+  loki: registry.atmosphere.dev/docker.io/grafana/loki:3.0.0@sha256:451563d761403fd66fdf7abef934f8712e864d47ef88f7b64e8ca52852fdaf28
+  magnum_api: registry.atmosphere.dev/library/magnum:2024.1@sha256:a78d06eeb531bf41f7764fcd0ec962bd75aa2f5eb19b39d6a60c7d62b0c3c96a
+  magnum_cluster_api_proxy: registry.atmosphere.dev/library/magnum:2024.1@sha256:a78d06eeb531bf41f7764fcd0ec962bd75aa2f5eb19b39d6a60c7d62b0c3c96a
+  magnum_conductor: registry.atmosphere.dev/library/magnum:2024.1@sha256:a78d06eeb531bf41f7764fcd0ec962bd75aa2f5eb19b39d6a60c7d62b0c3c96a
+  magnum_db_sync: registry.atmosphere.dev/library/magnum:2024.1@sha256:a78d06eeb531bf41f7764fcd0ec962bd75aa2f5eb19b39d6a60c7d62b0c3c96a
+  magnum_registry: quay.io/vexxhost/magnum-cluster-api-registry:latest@sha256:65f54066f385f3323e14d32a837a702be7ab4690e8ed4cac83d5d4d2ac6ee974
+  manila_api: registry.atmosphere.dev/library/manila:2024.1@sha256:587e29d6849907f5e5a24d9456a53eef9d783aef178fb2dd748c3b84139d68d5
+  manila_data: registry.atmosphere.dev/library/manila:2024.1@sha256:587e29d6849907f5e5a24d9456a53eef9d783aef178fb2dd748c3b84139d68d5
+  manila_db_sync: registry.atmosphere.dev/library/manila:2024.1@sha256:587e29d6849907f5e5a24d9456a53eef9d783aef178fb2dd748c3b84139d68d5
+  manila_scheduler: registry.atmosphere.dev/library/manila:2024.1@sha256:587e29d6849907f5e5a24d9456a53eef9d783aef178fb2dd748c3b84139d68d5
+  manila_share: registry.atmosphere.dev/library/manila:2024.1@sha256:587e29d6849907f5e5a24d9456a53eef9d783aef178fb2dd748c3b84139d68d5
+  memcached: registry.atmosphere.dev/docker.io/library/memcached:1.6.26@sha256:09eaba8e0b136af2f1d8a4985b4fda74ce2793f95ea66d82fbe5769c05b42ea3
+  netoffload: registry.atmosphere.dev/library/netoffload:2024.1@sha256:1956494d5ddb688f0a802761d7197355c310a7f30015cc0cb4d402455e3f9a82
+  neutron_bagpipe_bgp: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_bgp_dragent: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_coredns: registry.atmosphere.dev/docker.io/coredns/coredns:1.11.1@sha256:2169b3b96af988cf69d7dd69efbcc59433eb027320eb185c6110e0850b997870
+  neutron_db_sync: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_dhcp: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_ironic_agent: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_l2gw: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_l3: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_linuxbridge_agent: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_metadata: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_netns_cleanup_cron: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_openvswitch_agent: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_ovn_metadata: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_server: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_rpc_server: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_sriov_agent_init: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_sriov_agent: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  neutron_policy_server: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  node_feature_discovery: registry.k8s.io/nfd/node-feature-discovery:v0.15.4@sha256:2c7274a4ca5ddb07ff127dfe61a8ab5d61caf73bcf198b1ff1bd221e030b6ea7
+  nova_api: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_archive_deleted_rows: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_cell_setup_init: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  nova_cell_setup: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_compute_ironic: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_compute_ssh: registry.atmosphere.dev/library/nova-ssh:2024.1@sha256:ec2281f396022e3f2d5bf9da7e3eec9bc37d37c1372d7a26674bdba8faa8a766
+  nova_compute: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_conductor: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_consoleauth: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_db_sync: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_novncproxy_assets: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_novncproxy: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_placement: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_scheduler: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_service_cleaner: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  nova_spiceproxy_assets: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  nova_spiceproxy: registry.atmosphere.dev/library/nova:2024.1@sha256:8db98f1bf903e71bcf86a5b9c3f178e8edafa88fe07144e174b27179ecdd861c
+  oauth2_proxy: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0@sha256:dcb6ff8dd21bf3058f6a22c6fa385fa5b897a9cd3914c88a2cc2bb0a85f8065d
+  octavia_api: registry.atmosphere.dev/library/octavia:2024.1@sha256:e4fc969eafb25097d4d2fef14cd7636564e2ba18b3a3c1ba9b7bcf4aba506192
+  octavia_db_sync: registry.atmosphere.dev/library/octavia:2024.1@sha256:e4fc969eafb25097d4d2fef14cd7636564e2ba18b3a3c1ba9b7bcf4aba506192
+  octavia_health_manager_init: registry.atmosphere.dev/library/heat:2024.1@sha256:73a5ba752bf84d2126b1271a0dbb369a69d5a39990d23c848c7c5facc9428fce
+  octavia_health_manager: registry.atmosphere.dev/library/octavia:2024.1@sha256:e4fc969eafb25097d4d2fef14cd7636564e2ba18b3a3c1ba9b7bcf4aba506192
+  octavia_housekeeping: registry.atmosphere.dev/library/octavia:2024.1@sha256:e4fc969eafb25097d4d2fef14cd7636564e2ba18b3a3c1ba9b7bcf4aba506192
+  octavia_worker: registry.atmosphere.dev/library/octavia:2024.1@sha256:e4fc969eafb25097d4d2fef14cd7636564e2ba18b3a3c1ba9b7bcf4aba506192
+  openstack_cli: registry.atmosphere.dev/library/python-openstackclient:2024.1@sha256:8968ba85e28fd78aad3510dbc65018be5ede0d070a3db4bd8732e38949158948
+  openvswitch_db_server: registry.atmosphere.dev/library/openvswitch:2024.1@sha256:a07aec0d7dbc4b2e37649ddaffa23be6e7046d6868f1a40e48751a686179bf0f
+  openvswitch_vswitchd: registry.atmosphere.dev/library/openvswitch:2024.1@sha256:a07aec0d7dbc4b2e37649ddaffa23be6e7046d6868f1a40e48751a686179bf0f
+  ovn_controller: registry.atmosphere.dev/library/ovn-host:2024.1@sha256:e785c7ea7a72338df180370a2277b38c0e689ee4182dd46542ed1a18e74a8931
+  ovn_logging_parser: registry.atmosphere.dev/library/neutron:2024.1@sha256:bbe16997921850c97a70c377d71f75d5ad69868180e2432699f67eafeac4b0c8
+  ovn_northd: registry.atmosphere.dev/library/ovn-central:2024.1@sha256:b70329fc6655f0b727b9b5dafa1ed087ba443b0b9542fbee3e4a304e22b7978b
+  ovn_ovsdb_nb: registry.atmosphere.dev/library/ovn-central:2024.1@sha256:b70329fc6655f0b727b9b5dafa1ed087ba443b0b9542fbee3e4a304e22b7978b
+  ovn_ovsdb_sb: registry.atmosphere.dev/library/ovn-central:2024.1@sha256:b70329fc6655f0b727b9b5dafa1ed087ba443b0b9542fbee3e4a304e22b7978b
+  pause: registry.k8s.io/pause:3.9@sha256:8d4106c88ec0bd28001e34c975d65175d994072d65341f62a8ab0754b0fafe10
+  percona_xtradb_cluster_haproxy: registry.atmosphere.dev/docker.io/percona/percona-xtradb-cluster-operator:1.14.0-haproxy@sha256:15b9dad6d59c7995456b92fb1b5c17501ecbc8bafb758ff6e7417d409f06bbbd
+  percona_xtradb_cluster_operator: registry.atmosphere.dev/docker.io/percona/percona-xtradb-cluster-operator:1.14.0@sha256:3232ae01d0ff1e17922a7f1b0f3c69ada18d3a335e68ff09e25c9b931c1cd319
+  percona_xtradb_cluster: registry.atmosphere.dev/docker.io/percona/percona-xtradb-cluster:8.0.36-28.1@sha256:b5cc4034ccfb0186d6a734cb749ae17f013b027e9e64746b2c876e8beef379b3
+  percona_version_service: registry.atmosphere.dev/docker.io/perconalab/version-service:production-2048c1f@sha256:13f68e1d048fd9efc019daf1c5ad57e364c9effcd1d29f9e382cfc9c2666a5e3
+  placement_db_sync: registry.atmosphere.dev/library/placement:2024.1@sha256:831b825f43c615cfc00fb054d54aac6470e290a493a4e212081094e32511b8cb
+  placement: registry.atmosphere.dev/library/placement:2024.1@sha256:831b825f43c615cfc00fb054d54aac6470e290a493a4e212081094e32511b8cb
+  pod_tls_sidecar: registry.atmosphere.dev/library/pod-tls-sidecar:latest@sha256:fa7fa4a8f58fd479ff8c2f9f20ffd852b26164f1de83702f0844f37f18de8d3e
+  prometheus_config_reloader: quay.io/prometheus-operator/prometheus-config-reloader:v0.73.0@sha256:d0e5f8d12f8be6223c93bd13b6d2729ed8f1ae13a61ace8cd1eea3d165666140
+  prometheus_ipmi_exporter: us-docker.pkg.dev/vexxhost-infra/openstack/ipmi-exporter:1.4.0@sha256:4898da9cc11961a56363e8b3f3437d0f45b46585b20c79e33e97fbe7232e05d2
+  prometheus_memcached_exporter: quay.io/prometheus/memcached-exporter:v0.14.3@sha256:42fc7a1b5e24dd8965d74b8ac5102f568138b3c64ac17b5879bc07665c0700b0
+  prometheus_mysqld_exporter: quay.io/prometheus/mysqld-exporter:v0.15.1@sha256:7211a617ec657701ca819aa0ba28e1d5750f5bf2c1391b755cc4a48cc360b0fa
+  prometheus_node_exporter: quay.io/prometheus/node-exporter:v1.8.1@sha256:fa7fa12a57eff607176d5c363d8bb08dfbf636b36ac3cb5613a202f3c61a6631
+  prometheus_openstack_database_exporter: ghcr.io/vexxhost/openstack-database-exporter:v0.4.2@sha256:19c25a9ec6c3143b1b96ff877c99cd500838cb67dd4ae6595992a7eb59b35d19
+  prometheus_openstack_exporter: ghcr.io/openstack-exporter/openstack-exporter:1.7.0@sha256:e5146a7dd5153c035fd8060899e3504b25557756ef4a4d85860a409247404f97
+  prometheus_operator_kube_webhook_certgen: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6@sha256:5e6fdb9b2c74ad2576dd835b389d00d18ccfee21b547d1a79efb881009664099
+  prometheus_operator: quay.io/prometheus-operator/prometheus-operator:v0.74.0@sha256:6b3f6d8b4c0a6c77dfd447ee5870f6abd939151915934f1c61e379a039798030
+  prometheus_pushgateway: registry.atmosphere.dev/docker.io/prom/pushgateway:v1.8.0@sha256:315d4fc547593bfe9efa084830a3880c95dbbb1c88e186f0ef7fa3cd1ec6bedb
+  prometheus: quay.io/prometheus/prometheus:v2.51.2@sha256:4f6c47e39a9064028766e8c95890ed15690c30f00c4ba14e7ce6ae1ded0295b1
+  rabbit_init: registry.atmosphere.dev/docker.io/library/rabbitmq:3.13.3-management@sha256:d1221527001e1c59f8519b1e4cbdf023387a385004615cedb640b93503522781
+  rabbitmq_cluster_operator: registry.atmosphere.dev/docker.io/rabbitmqoperator/cluster-operator:2.9.0@sha256:4465ac237b6b446d814cc6446f83065c8ff9d3de344791640d148ad3fed0b309
+  rabbitmq_credential_updater: registry.atmosphere.dev/docker.io/rabbitmqoperator/default-user-credential-updater:1.0.4@sha256:fe2fa5e69c280a87a2233a26d77c9fa6778a23bb666b744acbd6733e644e38a0
+  rabbitmq_server: registry.atmosphere.dev/docker.io/library/rabbitmq:3.13.3-management@sha256:d1221527001e1c59f8519b1e4cbdf023387a385004615cedb640b93503522781
+  rabbitmq_topology_operator: registry.atmosphere.dev/docker.io/rabbitmqoperator/messaging-topology-operator:1.14.1@sha256:bbdd5ffaa44235d1bca40c82ac6eda5d7df216304b019122f442e42d61928e88
+  rook_ceph: registry.atmosphere.dev/docker.io/rook/ceph:v1.14.5@sha256:d8da0d01b0a92bece89b7a9d5955c9447f0460fadf594036bad62657b6a95db6
   secretgen_controller: ghcr.io/carvel-dev/secretgen-controller@sha256:59ec05ce5847bfd70c8e04f08b5195e918c8f6fbb947ffc91b456494a2958fd5
-  staffeln_db_sync: "registry.atmosphere.dev/library/staffeln:{{ atmosphere_release }}"
-  staffeln_conductor: "registry.atmosphere.dev/library/staffeln:{{ atmosphere_release }}"
-  staffeln_api: "registry.atmosphere.dev/library/staffeln:{{ atmosphere_release }}"
-  tempest_run_tests: "registry.atmosphere.dev/library/tempest:{{ atmosphere_release }}"
-  vector: docker.io/timberio/vector:0.38.0-debian
+  staffeln_db_sync: registry.atmosphere.dev/library/staffeln:2024.1@sha256:95420bd12fd06daa98c4d37553a4e36d5579da880412838c5ef074df92ab7b02
+  staffeln_conductor: registry.atmosphere.dev/library/staffeln:2024.1@sha256:95420bd12fd06daa98c4d37553a4e36d5579da880412838c5ef074df92ab7b02
+  staffeln_api: registry.atmosphere.dev/library/staffeln:2024.1@sha256:95420bd12fd06daa98c4d37553a4e36d5579da880412838c5ef074df92ab7b02
+  tempest_run_tests: registry.atmosphere.dev/library/tempest:2024.1@sha256:71a03099ce6dcd74a56a681702cd0d692f3453ace3b8b742d5be8b11ba7921f5
+  vector: registry.atmosphere.dev/docker.io/timberio/vector:0.38.0-debian@sha256:7605ccc5a57b6d37650037c7c6495a6331ecd18b5ec326842e76f9d70d445e0b
 
 atmosphere_images: '{{ _atmosphere_images | combine(atmosphere_image_overrides, recursive=True)
   }}'
