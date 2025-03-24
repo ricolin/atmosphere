@@ -178,12 +178,13 @@ _atmosphere_images:
   nova_spiceproxy: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/nova:{{ atmosphere_release }}"
   nova_storage_init: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
   oauth2_proxy: "{{ atmosphere_image_prefix }}quay.io/oauth2-proxy/oauth2-proxy:v7.6.0"
-  octavia_api: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_db_sync: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
+  octavia_api: docker.io/rico/octavia:1.0
+  octavia_driver_agent: docker.io/rico/octavia:1.0
+  octavia_db_sync: docker.io/rico/octavia:1.0
   octavia_health_manager_init: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/heat:{{ atmosphere_release }}"
-  octavia_health_manager: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_housekeeping: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
-  octavia_worker: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/octavia:{{ atmosphere_release }}"
+  octavia_health_manager: docker.io/rico/octavia:1.0
+  octavia_housekeeping: docker.io/rico/octavia:1.0
+  octavia_worker: docker.io/rico/octavia:1.0
   openstack_cli: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/python-openstackclient:{{ atmosphere_release }}"
   openvswitch_db_server: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/openvswitch:{{ atmosphere_release }}"
   openvswitch_vswitchd: "{{ atmosphere_image_prefix }}registry.atmosphere.dev/library/openvswitch:{{ atmosphere_release }}"

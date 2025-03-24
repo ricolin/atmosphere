@@ -8,8 +8,8 @@ ARG OCTAVIA_GIT_REF=06251e9716719dd8f62144ecd41d26360a539f7d
 ADD --keep-git-dir=true https://opendev.org/openstack/octavia.git#${OCTAVIA_GIT_REF} /src/octavia
 RUN git -C /src/octavia fetch --unshallow
 # renovate: name=openstack/ovn-octavia-provider repo=https://opendev.org/openstack/ovn-octavia-provider.git branch=unmaintained/2023.1
-ARG OVN_OCTAVIA_PROVIDER_GIT_REF=393b8bd811f5cc63213286048efe6c5431151a0b
-ADD --keep-git-dir=true https://opendev.org/openstack/ovn-octavia-provider.git#${OVN_OCTAVIA_PROVIDER_GIT_REF} /src/ovn-octavia-provider
+ARG OVN_OCTAVIA_PROVIDER_GIT_REF=a1de932e07d33f8bce73e28e3928d6c390ef7b4f
+ADD --keep-git-dir=true https:/github.com/ricolin/ovn-octavia-provider.git#${OVN_OCTAVIA_PROVIDER_GIT_REF} /src/ovn-octavia-provider
 RUN git -C /src/ovn-octavia-provider fetch --unshallow
 RUN --mount=type=cache,mode=0755,target=/root/.cache/pip,sharing=private <<EOF bash -xe
 pip3 install \
